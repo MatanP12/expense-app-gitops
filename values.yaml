@@ -1,7 +1,6 @@
 
 deployment: 
   name: expense-app-dep
-  namespace: default
   podsName: expense-app-dep
   image:
     repository: 644435390668.dkr.ecr.ap-south-1.amazonaws.com/matan-protfolio
