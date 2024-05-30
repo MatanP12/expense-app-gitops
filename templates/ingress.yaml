@@ -11,7 +11,8 @@ spec:
   {{- range .Values.ingress.hosts  }}
   - http:
       paths:
-      - path: /
+      - host: {{ .host }}
+        path: /
         pathType: Prefix
         backend:
           service:

@@ -39,12 +39,11 @@ issuer:
   email: matanp103@gmail.com
   privateKeyName: domain-name-secret
 
-
 ingress:
   name: ingress-role
   enabled: true
   hosts:
-    - host: matan-dns.hopto.org
+    - host: matan-expenseapp.hopto.org 
   secretName: matan-dns-key
 
 loadBalancer:
