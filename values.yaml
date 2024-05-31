@@ -74,9 +74,9 @@ mongodb:
     enabled: false
   auth:
     enabled: true
-    existingSecret: ""
-    rootPassword: root
-    rootUser: matan
+    existingSecret: mongo_creds
+    # rootPassword: root
+    # rootUser: matan
 
   persistence:
     enabled: false
