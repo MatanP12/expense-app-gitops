@@ -75,7 +75,7 @@ mongodb:
   auth:
     enabled: true
     existingSecret: mongo-creds
-    userNames: ["server"]
+    usernames: ["server"]
     passwords: ["serverpass"]
     databases: ["expenses"]
 
