@@ -11,7 +11,7 @@
     {{- end -}}
   {{- end -}}
   {{- $mongoHosts = printf "%s%s" $mongoHosts $hosts -}}
-  {{ print $mongoHosts }}
+  {{ printf "%s/%s" $mongoHosts (first .Values.mongodb.auth.databases)  }}
 {{- end }}
 
 
