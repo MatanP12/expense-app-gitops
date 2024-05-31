@@ -23,8 +23,13 @@ spec:
         envFrom:
           - configMapRef:
               name: {{ .Values.configMap.name }}
-          - secretRef:
-              name: {{ .Values.secret.name }}
+        env:
+          - name: MONGODB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ .Values.mongodb.auth.existingSecret | .Values.secret.name }}
+                key: mongodb-passwords
+
 
 ---
 apiVersion: v1

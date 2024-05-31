@@ -22,3 +22,4 @@ metadata:
 data:
   MONGODB_HOST: "{{ include "mongo" .}}"
   MONGODB_PORT: "{{ .Values.mongodb.containerPort.mongodb }}"
+  MONGO_USERNAME: {{ .Values.mongodb.auth.userNames[0] }}
