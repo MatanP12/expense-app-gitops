@@ -1,7 +1,3 @@
-{{- if .Values.cronJob.enabled -}}
-
-
-
 
 {{- define "mongo-uri" }}
     {{- $host := printf "%s-%s-0" $.Release.Name $.Values.mongodb.nameOverride -}}
@@ -9,6 +5,7 @@
   {{ print $host }}
 {{- end }}
 
+{{- if .Values.cronJob.enabled -}}
 
 
 apiVersion: batch/v1
