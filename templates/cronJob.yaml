@@ -1,3 +1,8 @@
+{{- if .Values.cronJob.enabled -}}
+
+
+
+
 {{- define "mongo-uri" }}
     {{- $host := printf "%s-%s-0" $.Release.Name $.Values.mongodb.nameOverride -}}
     {{- $host = printf "%s.%s-%s.%s.svc.cluster.local" $host $.Release.Name $.Values.mongodb.service.name $.Release.Namespace -}}
@@ -27,3 +32,5 @@ spec:
                 {{ printf "--eval 'db.%s.%s'" .Values.cronJob.collectionName .Values.cronJob.collectionCommand }}
 
           restartPolicy: OnFailure
+
+{{- end -}}
