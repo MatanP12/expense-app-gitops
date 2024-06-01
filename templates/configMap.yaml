@@ -11,7 +11,7 @@
     {{- end -}}
   {{- end -}}
   {{- $mongoHosts = printf "%s%s" $mongoHosts $hosts -}}
-  {{ printf "%s:%d/%s?replicaSet=%s" $mongoHosts  (.Values.mongodb.containerPort | default 27017) (first .Values.mongodb.auth.databases) ( .Values.mongodb.replicaSetName | default "rs0" )  }}
+  {{ printf "%s:%d/%s?replicaSet=%s" $mongoHosts  (.Values.mongodb.containerPort.mongodb | default 27017) (first .Values.mongodb.auth.databases) ( .Values.mongodb.replicaSetName | default "rs0" )  }}
 {{- end }}
 
 
