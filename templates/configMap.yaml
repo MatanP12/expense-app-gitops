@@ -21,4 +21,4 @@ metadata:
   name: {{ .Values.configMap.name }}
 data:
   MONGODB_HOST: "{{ include "mongo" .}}"
-  MONGO_USERNAME: {{ first .Values.mongodb.auth.usernames }}
+  MONGODB_USERNAME: {{ first .Values.mongodb.auth.usernames }}
