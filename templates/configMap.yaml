@@ -11,7 +11,7 @@
     {{- end -}}
   {{- end -}}
   {{- $mongoHosts = printf "%s%s" $mongoHosts $hosts -}}
-  {{ printf "%s/%s" $mongoHosts (first .Values.mongodb.auth.databases)  }}
+  {{ printf "%s/%s?replicaSet=%s" $mongoHosts (first .Values.mongodb.auth.databases) ( .Values.mongodb.replicaSetName | default "rs0" )  }}
 {{- end }}
 
 
