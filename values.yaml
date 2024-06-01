@@ -57,8 +57,8 @@ mongodb:
   livenessProbe:
     enabled: false
   nameOverride: mongodb
-  containerPort:
-    mongodb: 27017
+  containerPorts:
+    mongodb: "27017"
   service:
     name: mongodb-headless
   architecture: replicaset
