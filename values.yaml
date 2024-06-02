@@ -87,7 +87,7 @@ mongodb:
     accessModes: ["ReadWriteOnce"]
     size: 8Gi
 
-storageClass:
+myStorageClass:
   provisioner: ebs.csi.aws.com
   type: gp2
   fsType: ext4

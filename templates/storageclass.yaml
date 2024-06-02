@@ -3,10 +3,10 @@
     kind: StorageClass
     metadata:
     name: {{ .Values.mongodb.persistence.storageClass }}
-    provisioner: {{ .Values.storageClass.provisioner }}
+    provisioner: {{ .Values.myStorageClass.provisioner }}
     parameters:
-    type: {{ .Values.storageClass.name }}
-    fsType: {{ .Values.storageClass.fsType }}
-    reclaimPolicy: {{ .Values.storageClass.reclaimPolicy }}
-    volumeBindingMode: {{ .Values.storageClass.volumeBindingMode }}
+    type: {{ .Values.myStorageClass.name }}
+    fsType: {{ .Values.myStorageClass.fsType }}
+    reclaimPolicy: {{ .Values.myStorageClass.reclaimPolicy }}
+    volumeBindingMode: {{ .Values.myStorageClass.volumeBindingMode }}
 {{- end -}} 
