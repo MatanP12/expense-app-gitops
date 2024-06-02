@@ -5,7 +5,7 @@ metadata:
   name: {{ .Values.ingress.name }}
   annotations:
     cert-manager.io/cluster-issuer: {{ .Values.issuer.name }}
-    acme.cert-manager.io/http01-ingress-class: nginx
+    # acme.cert-manager.io/http01-ingress-class: nginx
 
 spec:
   ingressClassName: nginx
