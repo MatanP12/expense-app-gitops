@@ -81,7 +81,7 @@ config:
         Match kube.*
         Index fluent-bit
         Type  _doc
-        Host elastic-search-elasticsearch.efk.svc.cluster.local
+        Host elastic-search-elasticsearch.logging.svc.cluster.local
         Port 9200
         tls.verify Off
         Logstash_Format On
@@ -94,7 +94,7 @@ config:
         Match host.*
         Index fluent-bit
         Type  _doc
-        Host elastic-search-elasticsearch.efk.svc.cluster.local
+        Host elastic-search-elasticsearch.logging.svc.cluster.local
         Port 9200
         tls.verify Off
         Logstash_Format On
@@ -107,7 +107,7 @@ config:
         Match nginx.*
         Index fluent-bit-nginx
         Type  _doc
-        Host elastic-search-elasticsearch.efk.svc.cluster.local
+        Host elastic-search-elasticsearch.logging.svc.cluster.local
         Port 9200
         tls.verify Off
         Logstash_Format On
