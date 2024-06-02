@@ -12,7 +12,7 @@ spec:
     namespace: logging
   sources:
   - repoURL: https://charts.bitnami.com/bitnami
-    chart: elasticsearch
+    chart: kibana
     targetRevision: 'v11.1.0'
     helm:
       valueFiles:
