@@ -43,7 +43,7 @@ ingress:
   name: ingress-role
   enabled: true
   hosts:
-    - host: matan-dns.ddnsking.com  
+    - host: matan-dns.servehttp.com
   secretName: expense-app-cert
 
 loadBalancer:
@@ -77,7 +77,8 @@ mongodb:
     enabled: true
     existingSecret: mongo-creds
     usernames: ["server"]
-    passwords: ["serverpass"]
+    # passwords: ["serverpass"]
+    # rootPassword
     databases: ["expenses"]
 
   persistence:
