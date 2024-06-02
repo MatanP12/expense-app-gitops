@@ -83,11 +83,11 @@ mongodb:
   persistence:
     enabled: true
     name: "datadir"
-    storageClass: "ebs-sc"
+    storageClass: ebs-sc
     accessModes: ["ReadWriteOnce"]
     size: 8Gi
 
-myStorageClass:
+storageClass:
   provisioner: ebs.csi.aws.com
   type: gp2
   fsType: ext4
