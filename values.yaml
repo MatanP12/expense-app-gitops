@@ -28,12 +28,12 @@ configMap:
   name: expense-app-conf
 
 secret:
-  external: true
+  external: false
   name: expense-app-secret
   type: Opaque
 
 issuer:
-  enabled: true
+  enabled: false
   name: letsencrypt-issuer
   server: https://acme-v02.api.letsencrypt.org/directory 
   email: matanp103@gmail.com

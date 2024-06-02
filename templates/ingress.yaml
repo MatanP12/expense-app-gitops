@@ -4,8 +4,9 @@ kind: Ingress
 metadata:
   name: {{ .Values.ingress.name }}
   annotations:
-    cert-manager.io/cluster-issuer: {{ .Values.issuer.name }}
-    # acme.cert-manager.io/http01-ingress-class: nginx
+  {{- if .Values.issuer.enabled -}}
+      cert-manager.io/cluster-issuer: {{ .Values.issuer.name }}
+  {{- end -}}
 
 spec:
   ingressClassName: nginx
