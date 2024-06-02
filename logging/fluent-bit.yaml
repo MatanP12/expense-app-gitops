@@ -12,7 +12,8 @@ spec:
     namespace: logging
   sources:
   - repoURL: https://fluent.github.io/helm-charts
-    chart: elasticsearch
+    chart: fluent-bit
+    targetRevision: 'v0.46.7'
     helm:
       valueFiles:
         - fluent-bit-values.yaml
