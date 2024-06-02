@@ -11,12 +11,11 @@ spec:
     server: https://kubernetes.default.svc
     namespace: logging
   sources:
-  - repoURL: https://charts.bitnami.com/bitnami
+  - repoURL: https://fluent.github.io/helm-charts
     chart: elasticsearch
-    targetRevision: 'v21.1.0'
     helm:
       valueFiles:
-        - elastic-values.yaml
+        - fluent-bit-values.yaml
   syncPolicy:
       automated:
         prune: true

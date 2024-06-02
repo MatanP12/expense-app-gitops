@@ -13,10 +13,10 @@ spec:
   sources:
   - repoURL: https://charts.bitnami.com/bitnami
     chart: elasticsearch
-    targetRevision: 'v21.1.0'
+    targetRevision: 'v11.1.0'
     helm:
       valueFiles:
-        - elastic-values.yaml
+        - kibana-values.yaml
   syncPolicy:
       automated:
         prune: true
