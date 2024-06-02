@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: elastic-search
+  name: fluent-bit
   namespace: argo
   finalizers:
   - resources-finalizer.argocd.argoproj.io
