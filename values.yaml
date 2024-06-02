@@ -37,7 +37,7 @@ issuer:
   name: letsencrypt-issuer
   server: https://acme-v02.api.letsencrypt.org/directory 
   email: matanp103@gmail.com
-  privateKeyName: domain-name-secret
+  privateKeyName: domain-private-key
 
 ingress:
   name: ingress-role
