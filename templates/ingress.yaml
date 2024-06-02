@@ -4,7 +4,7 @@ kind: Ingress
 metadata:
   name: {{ .Values.ingress.name }}
   annotations:
-    cert-manager.io/cluster-issuer: {{ .Values.issuer.name }}
+    cert-manager.io/issuer: {{ .Values.issuer.name }}
 spec:
   ingressClassName: nginx
   rules:
@@ -28,6 +28,8 @@ spec:
         {{ end -}}
         secretName: {{ .Values.ingress.secretName }}
   {{- end -}}
+
+
 {{- else -}}
 apiVersion: v1
 kind: Service

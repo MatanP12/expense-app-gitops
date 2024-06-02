@@ -81,7 +81,7 @@ mongodb:
     databases: ["expenses"]
 
   persistence:
-    enabled: false
+    enabled: true
     name: "datadir"
     accessModes: ["ReadWriteOnce"]
     size: 8Gi
