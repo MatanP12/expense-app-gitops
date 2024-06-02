@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: elastic-search
+  namespace: argo
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: logging
+  sources:
+  - repoURL: https://charts.bitnami.com/bitnami
+    chart: elasticsearch
+    targetRevision: 'v21.1.0'
+    helm:
+      vakueFiles:
+        - elastic-values.yaml
+  syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true
+      syncOptions:
+        - CreateNamespace=true
