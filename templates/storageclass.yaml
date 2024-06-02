@@ -1,12 +1,12 @@
-{{- if .Values.mongodb.persistence.enabled -}}
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-    name: {{ .Values.mongodb.persistence.storageClass }}
-provisioner: {{ .Values.storageClass.provisioner }}
-parameters:
-    type: {{ .Values.storageClass.type }}
-    fsType: {{ .Values.storageClass.fsType }}
-    reclaimPolicy: {{ .Values.storageClass.reclaimPolicy }}
-    volumeBindingMode: {{ .Values.storageClass.volumeBindingMode }}
-{{- end -}} 
+# {{- if .Values.mongodb.persistence.enabled -}}
+# apiVersion: storage.k8s.io/v1
+# kind: StorageClass
+# metadata:
+#     name: {{ .Values.mongodb.persistence.storageClass }}
+# provisioner: {{ .Values.storageClass.provisioner }}
+# parameters:
+#     type: {{ .Values.storageClass.type }}
+#     fsType: {{ .Values.storageClass.fsType }}
+#     reclaimPolicy: {{ .Values.storageClass.reclaimPolicy }}
+#     volumeBindingMode: {{ .Values.storageClass.volumeBindingMode }}
+# {{- end -}} 
