@@ -1,13 +1,13 @@
 master:
   masterOnly: false
   replicaCount: 1
-  resources:
-    requests:
-      cpu: "0.2"
-      memory: "1Gi"
-    limits:
-      cpu: "0.4"
-      memory: "2Gi"
+  # resources:
+  #   requests:
+  #     cpu: "0.2"
+  #     memory: "1Gi"
+  #   limits:
+  #     cpu: "0.4"
+  #     memory: "2Gi"
   readinessProbe:
     enabled: false
   livenessProbe:

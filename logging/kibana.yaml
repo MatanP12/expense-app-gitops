@@ -16,7 +16,11 @@ spec:
     targetRevision: 'v11.1.0'
     helm:
       valueFiles:
-        - kibana-values.yaml
+        - $values/logging/kibana-values.yaml
+  - repoURL: git@gitlab.com:matanp103/expense-app-gitops.git
+    targetRevision: dev
+    ref: values
+
   syncPolicy:
       automated:
         prune: true

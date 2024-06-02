@@ -16,7 +16,10 @@ spec:
     targetRevision: 'v0.46.7'
     helm:
       valueFiles:
-        - fluent-bit-values.yaml
+        - $values/logging/fluent-bit-values.yaml
+  - repoURL: git@gitlab.com:matanp103/expense-app-gitops.git
+    targetRevision: dev
+    ref: values
   syncPolicy:
       automated:
         prune: true

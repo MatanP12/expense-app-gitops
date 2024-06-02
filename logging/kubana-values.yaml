@@ -7,12 +7,12 @@ readinessProbe:
 livenessProbe:
   enabled: false
 resources:
-  requests:
-    cpu: "0.2"
-    memory: "2000Mi"
-  limits:
-    cpu: "0.2"
-    memory: "2000Mi"
+  # requests:
+  #   cpu: "0.2"
+  #   memory: "2000Mi"
+  # limits:
+  #   cpu: "0.2"
+  #   memory: "2000Mi"
 xpack:
     reporting:
       roles:
