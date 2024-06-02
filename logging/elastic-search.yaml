@@ -16,7 +16,7 @@ spec:
     targetRevision: 'v21.1.0'
     helm:
       valueFiles:
-        - $values/loggingelastic-values.yaml
+        - $values/logging/elastic-values.yaml
   - repoURL: git@gitlab.com:matanp103/expense-app-gitops.git
     # targetRevision: dev
     ref: values
