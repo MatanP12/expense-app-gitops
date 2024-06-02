@@ -44,7 +44,7 @@ ingress:
   enabled: true
   hosts:
     - host: matan-dns.servehttp.com
-  secretName: expense-app-cert
+  secretName: expense-app-cert-tls
 
 loadBalancer:
   name: expense-app-lb
