@@ -18,6 +18,8 @@ spec:
       valueFiles:
         - $values/monitoring/prometheus-values.yaml
   - repoURL: git@gitlab.com:matanp103/expense-app-gitops.git
+    targetRevision: HEAD
+    ref: values
   syncPolicy:
       automated:
         prune: true
