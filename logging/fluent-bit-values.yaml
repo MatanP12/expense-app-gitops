@@ -104,7 +104,7 @@ config:
 
     [OUTPUT]
         Name es
-        Match *expense*
+        Match expense-app-dep-*
         Index fluent-bit
         Type  _doc
         Host elastic-search-elasticsearch.logging.svc.cluster.local
