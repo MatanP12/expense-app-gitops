@@ -13,7 +13,7 @@ spec:
   sources:
   - repoURL: https://prometheus-community.github.io/helm-charts
     chart: kube-prometheus-stack
-    targetRevision: 'v59.1.0'
+    targetRevision: '59.0.0'
     helm:
       valueFiles:
         - $values/monitoring/prometheus-values.yaml
@@ -26,3 +26,4 @@ spec:
         selfHeal: true
       syncOptions:
         - CreateNamespace=true
+        - ServerSideApply=true
