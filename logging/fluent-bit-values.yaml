@@ -116,6 +116,7 @@ config:
         Suppress_Type_Name On
 
 
+
     [OUTPUT]
         Name es
         Match nginx.*
