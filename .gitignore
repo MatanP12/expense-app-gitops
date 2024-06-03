@@ -1,2 +1,3 @@
 Chart.lock
 *.tgz
+mongo_secret.yaml
