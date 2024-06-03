@@ -14,6 +14,8 @@ master:
     enabled: false
 data:
   replicaCount: 0
+  persistence:
+    enabled: false
 ingest:
   enabled: false
 coordinating:
@@ -23,9 +25,9 @@ volumeClaimTemplate:
   resources:
     requests:
       storage: 50Gi
-persistence:
-  labels:
-    enabled: false
+# persistence:
+#   labels:
+#     enabled: false
 secret:
   enabled: true
   password: "password"
