@@ -82,7 +82,7 @@ mongodb:
     databases: ["expenses"]
 
   persistence:
-    enabled: true
+    enabled: false
     name: "datadir"
     storageClass: ""
     accessModes: ["ReadWriteOnce"]
