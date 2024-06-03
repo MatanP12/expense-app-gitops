@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: expense-app-monitor
+  namespace: expense-app
+  labels:
+    release: kps
+spec:
+  endpoints:
+  - interval: 30s
+    targetPort: 5000
+    path: /metrics
+  namespaceSelector:
+    matchNames:
+    - expense-app
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: expense-app
