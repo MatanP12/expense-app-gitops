@@ -9,9 +9,9 @@ spec:
   ingressClassName: nginx
   rules:
   {{- range .Values.ingress.hosts  }}
-  - http:
+  - host: {{ .host }}
+    http:
       paths:
-      - host: {{ .host }}
         path: /
         pathType: Prefix
         backend:
