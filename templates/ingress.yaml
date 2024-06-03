@@ -12,13 +12,13 @@ spec:
   - host: {{ .host }}
     http:
       paths:
-        path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: {{  $.Values.deployment.service.name }}
-            port:
-              number: {{ $.Values.deployment.service.port  }}
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: {{  $.Values.deployment.service.name }}
+              port:
+                number: {{ $.Values.deployment.service.port  }}
   {{ end  -}}
   {{- if .Values.issuer.enabled -}}
     tls:
