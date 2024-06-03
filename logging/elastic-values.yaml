@@ -25,7 +25,7 @@ volumeClaimTemplate:
       storage: 50Gi
 persistence:
   labels:
-    enabled: false
+    enabled: true
 secret:
   enabled: true
   password: "password"
