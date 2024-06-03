@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: git@gitlab.com:matanp103/expense-app-gitops.git
     targetRevision: HEAD
-    path: ./monitorting
+    path: ./monitoring
   destination:
     server: https://kubernetes.default.svc
     namespace: argo
