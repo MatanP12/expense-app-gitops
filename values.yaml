@@ -33,7 +33,7 @@ secret:
   type: Opaque
 
 issuer:
-  enabled: false
+  enabled: true
   name: letsencrypt-issuer
   server: https://acme-v02.api.letsencrypt.org/directory 
   email: matanp103@gmail.com
