@@ -43,7 +43,7 @@ ingress:
   name: ingress-role
   enabled: true
   hosts:
-    - host: matan-dns.servehttp.com
+    - host: matan-expenseapp.ddnsking.com
   secretName: expense-app-cert-tls
 
 loadBalancer:

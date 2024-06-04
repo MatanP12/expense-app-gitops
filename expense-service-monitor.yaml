@@ -2,7 +2,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: expense-app-monitor
-  namespace: expense-app
+  namespace: expense-tracker
   labels:
     release: kps
 spec:

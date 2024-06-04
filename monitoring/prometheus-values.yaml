@@ -12,7 +12,7 @@ prometheus:
         scheme: http
         static_configs:
           - targets:
-              - matan-dns.servehttp.com
+              - matan-expenseapp.ddnsking.com
 
 
 
